@@ -2,14 +2,25 @@ import Passaport from '@/components/Passaport'
 import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
 import PassaporteEncantado from '@/public/images/tickets/encantado.png'
 import PassaporteEspetacular from '@/public/images/tickets/espetacular.png'
+import Link from 'next/link'
+import { BsChevronRight } from 'react-icons/bs'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 export default function Passaports() {
   return (
     <section>
       <div className="container mx-auto py-8">
-        <h2 className="font-black text-3xl text-blue-100 mb-5">Passaportes</h2>
-        <Swiper spaceBetween={20}>
+        <div className="flex items-center justify-between">
+          <h2 className="font-black text-3xl text-blue-100 mb-5">Passaportes</h2>
+          <Link
+            href="/ingressos"
+            title="Ver todos"
+            className="text-red font-bold flex items-center gap-2"
+          >
+            Ver todos <BsChevronRight />
+          </Link>
+        </div>
+        <Swiper spaceBetween={20} slidesPerView="auto">
           <SwiperSlide className="max-w-[600px]">
             <Passaport
               price={39.97}

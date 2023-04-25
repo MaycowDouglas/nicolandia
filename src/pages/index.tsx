@@ -29,7 +29,8 @@ import NicoAppDark from '@/public/images/brands/nicoapp-dark.svg'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { useEffect } from 'react'
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 
 export default function HomePage() {
   const atractions = [
@@ -139,12 +140,12 @@ export default function HomePage() {
 
       <Passaports />
 
-      <section className="flex bg-gray-200 py-8">
-        <div className="container mx-auto flex items-center justify-center gap-14">
+      <section className="flex bg-gray-200 py-8 text-center lg:text-left">
+        <div className="container flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-10 xl:gap-14">
           <Image src={NicoAppDark} alt="Nico App" />
           <div>
-            <h2 className="font-black text-blue-100 text-4xl">
-              Confira ainda mais opções <br /> no nosso app
+            <h2 className="font-black text-blue-100 text-3xl xl:text-4xl">
+              Confira ainda mais opções <br className="hidden lg:inline" /> no nosso app
             </h2>
             <p className="text-gray">Garanta descontos exlclusivos no nosso app</p>
           </div>
@@ -158,10 +159,17 @@ export default function HomePage() {
       </section>
 
       <section id="atracoes" className="py-8">
-        <div className="container mx-auto">
+        <div className="container">
           <h2 className="font-black text-3xl text-blue-100 mb-5">Atrações</h2>
 
-          <Swiper spaceBetween={20}>
+          <Swiper
+            spaceBetween={20}
+            slidesPerView="auto"
+            allowTouchMove
+            touchRatio={0.5}
+            touchEventsTarget="wrapper"
+            draggable
+          >
             {atractions.map((a, index) => (
               <SwiperSlide key={index} className="max-w-[240px] bg-gray-200 rounded-xl">
                 <div className="relative h-44">
