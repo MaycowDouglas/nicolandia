@@ -4,7 +4,9 @@ import PassaporteEncantado from '@/public/images/tickets/encantado.png'
 import PassaporteEspetacular from '@/public/images/tickets/espetacular.png'
 import Link from 'next/link'
 import { BsChevronRight } from 'react-icons/bs'
+import SwiperCore, { Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+SwiperCore.use([Autoplay])
 
 export default function Passaports() {
   return (
@@ -20,7 +22,7 @@ export default function Passaports() {
             Ver todos <BsChevronRight />
           </Link>
         </div>
-        <Swiper spaceBetween={20} slidesPerView="auto">
+        <Swiper spaceBetween={20} slidesPerView="auto" autoplay={{ delay: 3000 }}>
           <SwiperSlide className="max-w-[600px]">
             <Passaport
               price={39.97}

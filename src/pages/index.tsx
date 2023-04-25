@@ -30,7 +30,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect } from 'react'
+import SwiperCore, { Autoplay } from 'swiper'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
+SwiperCore.use([Autoplay])
 
 export default function HomePage() {
   const atractions = [
@@ -129,10 +131,37 @@ export default function HomePage() {
       <Navbar />
 
       <section>
-        <Swiper>
+        <Swiper autoplay={{ delay: 4000 }}>
           <SwiperSlide className="">
             <div className="relative w-full h-screen">
-              <Image src={BannerOneWeb} fill className="object-cover" alt="" />
+              <Image
+                src="https://yuupe.com/uploads/23e84158358d248dfc85554ab86e2352.jpeg"
+                fill
+                className="object-cover hidden md:block"
+                alt=""
+              />
+              <Image
+                src="https://yuupe.com/uploads/552aa143a150078fc62fbd3f1e640cfb.jpeg"
+                fill
+                className="object-cover md:hidden"
+                alt=""
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="">
+            <div className="relative w-full h-screen">
+              <Image
+                src="https://yuupe.com/uploads/2b0f16217555626ecd9998ce6e70a8a6.jpeg"
+                fill
+                className="object-cover hidden md:block"
+                alt=""
+              />
+              <Image
+                src="https://yuupe.com/uploads/4ce6855a3e316aba22559fdc99bca6ae.jpeg"
+                fill
+                className="object-cover md:hidden"
+                alt=""
+              />
             </div>
           </SwiperSlide>
         </Swiper>
@@ -166,9 +195,8 @@ export default function HomePage() {
             spaceBetween={20}
             slidesPerView="auto"
             allowTouchMove
-            touchRatio={0.5}
-            touchEventsTarget="wrapper"
             draggable
+            autoplay={{ delay: 2000 }}
           >
             {atractions.map((a, index) => (
               <SwiperSlide key={index} className="max-w-[240px] bg-gray-200 rounded-xl">
