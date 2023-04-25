@@ -15,7 +15,7 @@ export default function Navbar() {
     <nav className="bg-light py-5">
       <div className="container relative flex items-center justify-between lg:justify-start">
         <Link href="/" title="Ir para home">
-          <Image className="w-24" src={NicolandiaRed} alt="Nicolândia" />
+          <Image className="w-16 lg:w-24" src={NicolandiaRed} alt="Nicolândia" />
         </Link>
 
         <button
@@ -30,11 +30,11 @@ export default function Navbar() {
             showMenu ? 'block' : 'hidden'
           }`}
         >
-          <ul className="space-y-3 lg:flex lg:items-center lg:space-y-0 lg:space-x-5 lg:ml-5">
+          <ul className="space-y-3 lg:flex lg:items-center lg:space-y-0 lg:space-x-5 lg:ml-10">
             <li>
               <Link
                 title="Passaportes"
-                href="/#passaportes"
+                href="/ingressos"
                 className="text-red font-bold tracking-wider"
               >
                 Passaportes

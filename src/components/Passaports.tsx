@@ -2,6 +2,7 @@ import Passaport from '@/components/Passaport'
 import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
 import PassaporteEncantado from '@/public/images/tickets/encantado.png'
 import PassaporteEspetacular from '@/public/images/tickets/espetacular.png'
+import PassaporteIndividual from '@/public/images/tickets/individual.png'
 import Link from 'next/link'
 import { BsChevronRight } from 'react-icons/bs'
 import SwiperCore, { Autoplay } from 'swiper'
@@ -9,6 +10,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 SwiperCore.use([Autoplay])
 
 export default function Passaports() {
+  const today = new Date()
   return (
     <section>
       <div className="container mx-auto py-8">
@@ -24,15 +26,27 @@ export default function Passaports() {
         </div>
         <Swiper spaceBetween={20} slidesPerView="auto" autoplay={{ delay: 3000 }}>
           <SwiperSlide className="max-w-[600px]">
-            <Passaport
-              price={39.97}
-              amount={1}
-              name="Passaporte Antecipado"
-              background="yellow"
-              image={PassaporteAntecipado}
-              href="https://pague.yuupe.com/produtos/7"
-            />
+            {today.getDay() > 1 && today.getDay() < 6 ? (
+              <Passaport
+                price={39.97}
+                amount={1}
+                name="Passaporte Antecipado"
+                background="yellow"
+                image={PassaporteAntecipado}
+                href="https://pague.yuupe.com/produtos/7"
+              />
+            ) : (
+              <Passaport
+                price={39.97}
+                amount={1}
+                name="Passaporte Individual"
+                background="yellow"
+                image={PassaporteIndividual}
+                href="https://pague.yuupe.com/produtos/2"
+              />
+            )}
           </SwiperSlide>
+
           <SwiperSlide className="max-w-[600px]">
             <Passaport
               price={109.97}
