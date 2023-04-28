@@ -40,7 +40,7 @@ export default function Passaports() {
                 price={59.97}
                 amount={1}
                 name="Passaporte Individual"
-                background="yellow"
+                background="blue"
                 image={PassaporteIndividual}
                 href="https://pague.yuupe.com/produtos/2"
               />

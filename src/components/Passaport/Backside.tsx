@@ -2,7 +2,7 @@ export type Props = {
   name: string
   amount: number
   price: number
-  background: 'red' | 'green' | 'yellow'
+  background: 'red' | 'green' | 'yellow' | 'blue'
 }
 
 export default function Backside({ name, amount, price, background }: Props) {
@@ -10,6 +10,7 @@ export default function Backside({ name, amount, price, background }: Props) {
     red: 'bg-red',
     green: 'bg-green-200',
     yellow: 'bg-yellow',
+    blue: 'bg-blue-200',
   }
   return (
     <div
