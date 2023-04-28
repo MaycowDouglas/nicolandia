@@ -130,16 +130,16 @@ export default function HomePage() {
         <Swiper autoplay={{ delay: 4000 }}>
           <SwiperSlide>
             <MainBanner
-              alt=""
+              alt="Diversão para toda a Família!"
               mobile="https://yuupe.com/uploads/552aa143a150078fc62fbd3f1e640cfb.jpeg"
               desktop="https://yuupe.com/uploads/23e84158358d248dfc85554ab86e2352.jpeg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <MainBanner
-              alt=""
-              mobile="https://yuupe.com/uploads/2b0f16217555626ecd9998ce6e70a8a6.jpeg"
-              desktop="https://yuupe.com/uploads/4ce6855a3e316aba22559fdc99bca6ae.jpeg"
+              alt="Passaporte Sessão Extra, por R$ 50,00 - Todo sábado e domingo a partir das 17h na bilheteria presencial."
+              mobile="https://yuupe.com/uploads/4ce6855a3e316aba22559fdc99bca6ae.jpeg"
+              desktop="https://yuupe.com/uploads/2b0f16217555626ecd9998ce6e70a8a6.jpeg"
             />
           </SwiperSlide>
         </Swiper>
