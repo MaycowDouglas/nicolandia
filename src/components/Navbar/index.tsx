@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { FaTimes, FaBars } from 'react-icons/fa'
 
+import NavbarLink from './Link'
+
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false)
 
@@ -31,47 +33,17 @@ export default function Navbar() {
           }`}
         >
           <ul className="space-y-3 lg:flex lg:items-center lg:space-y-0 lg:space-x-5 lg:ml-10">
-            <li>
-              <Link
-                title="Passaportes"
-                href="/ingressos"
-                className="text-red font-bold tracking-wider"
-              >
-                Passaportes
-              </Link>
-            </li>
-            <li>
-              <Link
-                title="Atrações"
-                href="/#atracoes"
-                className="text-red font-bold tracking-wider"
-              >
-                Atrações
-              </Link>
-            </li>
-            <li>
-              <Link
-                title="Atrações"
-                target="_blank"
-                href="https://play.google.com/store/apps/details?id=com.nicolandia"
-                className="text-red font-bold tracking-wider"
-              >
-                Baixe o app
-              </Link>
-            </li>
+            <NavbarLink title="Passaportes" href="/ingressos" />
+            <NavbarLink title="Atrações" href="/#atracoes" />
+            <NavbarLink
+              title="Baixe o app"
+              href="https://play.google.com/store/apps/details?id=com.nicolandia"
+            />
           </ul>
 
           <ul className="space-y-3 lg:flex lg:items-center lg:space-y-0 lg:space-x-5">
-            <li>
-              <Link
-                target="_blank"
-                title="Criar conta"
-                href="https://pague.yuupe.com/login#signup"
-                className="text-red font-bold tracking-wider"
-              >
-                Criar conta
-              </Link>
-            </li>
+            <NavbarLink title="Criar conta" href="https://pague.yuupe.com/login#signup" />
+
             <li>
               <Link
                 target="_blank"

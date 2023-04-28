@@ -1,6 +1,9 @@
 import 'swiper/css'
 
+import CTANicoApp from '@/components/CTA/NicoApp'
 import Footer from '@/components/Footer'
+import Layout from '@/components/Layout'
+import MainBanner from '@/components/MainBanner'
 import Navbar from '@/components/Navbar'
 import Passaports from '@/components/Passaports'
 import AtractionArenaElastica from '@/public/images/atractions/arena-elastica.jpeg'
@@ -119,73 +122,32 @@ export default function HomePage() {
   ]
 
   return (
-    <div>
-      <Head>
-        <title>Nova Nicolândia - Seu lugar de diversão</title>
-        <meta
-          name="description"
-          content="A Nova Nicolândia é um parque de diversões urbano e fechado, garantindo assim a segurança dos visitantes. O mundo da diversão não poderia estar em outro lugar, senão no coração de Brasília. Conheça o nosso parque e apaixone-se!"
-        />
-      </Head>
-
-      <Navbar />
-
+    <Layout
+      title="Seu lugar de diversão"
+      description="A Nova Nicolândia é um parque de diversões urbano e fechado, garantindo assim a segurança dos visitantes. O mundo da diversão não poderia estar em outro lugar, senão no coração de Brasília. Conheça o nosso parque e apaixone-se!"
+    >
       <section>
         <Swiper autoplay={{ delay: 4000 }}>
-          <SwiperSlide className="">
-            <div className="relative w-full h-screen">
-              <Image
-                src="https://yuupe.com/uploads/23e84158358d248dfc85554ab86e2352.jpeg"
-                fill
-                className="object-cover hidden md:block"
-                alt=""
-              />
-              <Image
-                src="https://yuupe.com/uploads/552aa143a150078fc62fbd3f1e640cfb.jpeg"
-                fill
-                className="object-cover md:hidden"
-                alt=""
-              />
-            </div>
+          <SwiperSlide>
+            <MainBanner
+              alt=""
+              mobile="https://yuupe.com/uploads/552aa143a150078fc62fbd3f1e640cfb.jpeg"
+              desktop="https://yuupe.com/uploads/23e84158358d248dfc85554ab86e2352.jpeg"
+            />
           </SwiperSlide>
-          <SwiperSlide className="">
-            <div className="relative w-full h-screen">
-              <Image
-                src="https://yuupe.com/uploads/2b0f16217555626ecd9998ce6e70a8a6.jpeg"
-                fill
-                className="object-cover hidden md:block"
-                alt=""
-              />
-              <Image
-                src="https://yuupe.com/uploads/4ce6855a3e316aba22559fdc99bca6ae.jpeg"
-                fill
-                className="object-cover md:hidden"
-                alt=""
-              />
-            </div>
+          <SwiperSlide>
+            <MainBanner
+              alt=""
+              mobile="https://yuupe.com/uploads/2b0f16217555626ecd9998ce6e70a8a6.jpeg"
+              desktop="https://yuupe.com/uploads/4ce6855a3e316aba22559fdc99bca6ae.jpeg"
+            />
           </SwiperSlide>
         </Swiper>
       </section>
 
       <Passaports />
 
-      <section className="flex bg-gray-200 py-8 text-center lg:text-left">
-        <div className="container flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-10 xl:gap-14">
-          <Image src={NicoAppDark} alt="Nico App" />
-          <div>
-            <h2 className="font-black text-blue-100 text-3xl xl:text-4xl">
-              Confira ainda mais opções <br className="hidden lg:inline" /> no nosso app
-            </h2>
-            <p className="text-gray">Garanta descontos exlclusivos no nosso app</p>
-          </div>
-          <Link
-            className="px-7 py-3 bg-red rounded-md text-light font-bold tracking-wide"
-            href="https://play.google.com/store/apps/details?id=com.nicolandia"
-          >
-            Baixe o Nicoapp
-          </Link>
-        </div>
-      </section>
+      <CTANicoApp />
 
       <section id="atracoes" className="py-8">
         <div className="container">
@@ -211,8 +173,6 @@ export default function HomePage() {
           </Swiper>
         </div>
       </section>
-
-      <Footer />
-    </div>
+    </Layout>
   )
 }
