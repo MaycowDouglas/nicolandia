@@ -26,7 +26,7 @@ export default function Passaports() {
         </div>
         <Swiper spaceBetween={20} slidesPerView="auto" autoplay={{ delay: 3000 }}>
           <SwiperSlide className="max-w-[600px]">
-            {today.getDay() > 1 && today.getDay() < 5 ? (
+            {today.getDay() >= 0 && today.getDay() < 5 ? (
               <Passaport
                 price={39.97}
                 amount={1}

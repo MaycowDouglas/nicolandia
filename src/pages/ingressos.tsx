@@ -26,7 +26,7 @@ export default function TicketsPage() {
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {today.getDay() > 1 && today.getDay() < 5 ? (
+            {today.getDay() >= 0 && today.getDay() < 5 ? (
               <div className="relative p-5 rounded-t-2xl overflow-hidden">
                 <Image src={Passaporte} alt="" fill className="object-cover object-bottom" />
                 <div className="relative z-10">
