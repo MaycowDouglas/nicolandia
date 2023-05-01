@@ -15,9 +15,9 @@ import { GoAlert } from 'react-icons/go'
 export default function TicketsPage() {
   const now = new Date()
   const nowSP = new Date(now.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }))
-  const promotionCondition =
-    (nowSP.getDay() >= 0 && nowSP.getDay() <= 3 && nowSP.getHours() >= 20) ||
-    (nowSP.getDay() === 4 && nowSP.getHours() <= 23 && nowSP.getMinutes() <= 59)
+  const promotionCondition = now.getDay() > 0 && now.getDay() < 5
+  // (nowSP.getDay() >= 0 && nowSP.getDay() <= 3 && nowSP.getHours() >= 20) ||
+  // (nowSP.getDay() === 4 && nowSP.getHours() <= 23 && nowSP.getMinutes() <= 59)
 
   return (
     <Layout
