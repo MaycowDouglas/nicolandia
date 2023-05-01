@@ -22,6 +22,7 @@ export default function Backside({ name, amount, price, background }: Props) {
           Para {amount} {amount > 1 ? 'pessoas' : 'pessoa'}
         </p>
         <div className="text-sm my-4 space-y-1">
+          <p>VÁLIDO POR 30 DIAS.</p>
           <p>VÁLIDO SOMENTE PARA COMPRAS ONLINE</p>
           <p>VÁLIDO DE SEXTA A DOMINGO OU FERIADOS.</p>
           <p>VÁLIDO SOMENTE DENTRO DO CALENDÁRIO OPERACIONAL DO PARQUE.</p>

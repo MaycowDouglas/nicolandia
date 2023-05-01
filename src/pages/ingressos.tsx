@@ -46,6 +46,7 @@ export default function TicketsPage() {
                     <h3 className="text-red text-2xl font-bold">Passaporte Antecipado</h3>
 
                     <ul className="py-5 space-y-2 text-blue-100">
+                      <li className="text-sm">VÁLIDO POR 30 DIAS.</li>
                       <li className="text-sm">VÁLIDO SOMENTE PARA COMPRAS ONLINE.</li>
                       <li className="text-sm">VÁLIDO DE SEXTA A DOMINGO OU FERIADOS.</li>
                       <li className="text-sm">
@@ -78,6 +79,7 @@ export default function TicketsPage() {
                     <h3 className="text-red text-2xl font-bold">Passaporte Individual</h3>
 
                     <ul className="py-5 space-y-2 text-blue-100">
+                      <li className="text-sm">VÁLIDO POR 30 DIAS.</li>
                       <li className="text-sm">VÁLIDO SOMENTE PARA COMPRAS ONLINE.</li>
                       <li className="text-sm">VÁLIDO DE SEXTA A DOMINGO OU FERIADOS.</li>
                       <li className="text-sm">
@@ -111,6 +113,7 @@ export default function TicketsPage() {
                   <h3 className="text-red text-2xl font-bold">Passaporte Encantado</h3>
 
                   <ul className="py-5 space-y-2 text-blue-100">
+                    <li className="text-sm">VÁLIDO POR 30 DIAS.</li>
                     <li className="text-sm">VÁLIDO SOMENTE PARA COMPRAS ONLINE.</li>
                     <li className="text-sm">VÁLIDO DE SEXTA A DOMINGO OU FERIADOS.</li>
                     <li className="text-sm">
@@ -142,6 +145,7 @@ export default function TicketsPage() {
                   <h3 className="text-red text-2xl font-bold">Passaporte Espetacular</h3>
 
                   <ul className="py-5 space-y-2 text-blue-100">
+                    <li className="text-sm">VÁLIDO POR 30 DIAS.</li>
                     <li className="text-sm">VÁLIDO SOMENTE PARA COMPRAS ONLINE.</li>
                     <li className="text-sm">VÁLIDO DE SEXTA A DOMINGO OU FERIADOS.</li>
                     <li className="text-sm">
