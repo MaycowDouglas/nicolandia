@@ -10,7 +10,12 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 SwiperCore.use([Autoplay])
 
 export default function Passaports() {
-  const today = new Date()
+  const now = new Date()
+  const nowSP = new Date(now.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }))
+  const promotionCondition =
+    (nowSP.getDay() >= 0 && nowSP.getDay() <= 3 && nowSP.getHours() >= 20) ||
+    (nowSP.getDay() === 4 && nowSP.getHours() <= 23 && nowSP.getMinutes() <= 59)
+
   return (
     <section>
       <div className="container mx-auto py-8">
@@ -26,7 +31,7 @@ export default function Passaports() {
         </div>
         <Swiper spaceBetween={20} slidesPerView="auto" autoplay={{ delay: 3000 }}>
           <SwiperSlide className="max-w-[600px]">
-            {today.getDay() >= 0 && today.getDay() < 5 ? (
+            {promotionCondition ? (
               <Passaport
                 price={39.97}
                 amount={1}

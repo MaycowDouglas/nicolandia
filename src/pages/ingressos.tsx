@@ -13,7 +13,12 @@ import { FaChevronRight } from 'react-icons/fa'
 import { GoAlert } from 'react-icons/go'
 
 export default function TicketsPage() {
-  const today = new Date()
+  const now = new Date()
+  const nowSP = new Date(now.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }))
+  const promotionCondition =
+    (nowSP.getDay() >= 0 && nowSP.getDay() <= 3 && nowSP.getHours() >= 20) ||
+    (nowSP.getDay() === 4 && nowSP.getHours() <= 23 && nowSP.getMinutes() <= 59)
+
   return (
     <Layout
       title="Ingressos e Convênios"
@@ -26,7 +31,7 @@ export default function TicketsPage() {
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {today.getDay() >= 0 && today.getDay() < 5 ? (
+            {promotionCondition ? (
               <div className="relative p-5 rounded-t-2xl overflow-hidden">
                 <Image src={Passaporte} alt="" fill className="object-cover object-bottom" />
                 <div className="relative z-10">
