@@ -1,4 +1,3 @@
-import Passaport from '@/components/Passaport'
 import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
 import PassaporteEncantado from '@/public/images/tickets/encantado.png'
 import PassaporteEspetacular from '@/public/images/tickets/espetacular.png'
@@ -7,14 +6,15 @@ import Link from 'next/link'
 import { BsChevronRight } from 'react-icons/bs'
 import SwiperCore, { Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+
+import PassaportSlide from './PassaportSlide'
 SwiperCore.use([Autoplay])
 
-export default function Passaports() {
+export default function PassaportCarousel() {
   const now = new Date()
   const nowSP = new Date(now.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }))
-  const promotionCondition = now.getDay() > 0 && now.getDay() < 5
-  // (nowSP.getDay() >= 0 && nowSP.getDay() <= 3 && nowSP.getHours() >= 20) ||
-  // (nowSP.getDay() === 4 && nowSP.getHours() <= 23 && nowSP.getMinutes() <= 59)
+  const promotionCondition =
+    (nowSP.getDay() >= 1 && nowSP.getDay() <= 4) || (nowSP.getDay() === 0 && nowSP.getHours() >= 20)
 
   return (
     <section>
@@ -32,7 +32,7 @@ export default function Passaports() {
         <Swiper spaceBetween={20} slidesPerView="auto" autoplay={{ delay: 3000 }}>
           <SwiperSlide className="max-w-[600px]">
             {promotionCondition ? (
-              <Passaport
+              <PassaportSlide
                 price={39.97}
                 amount={1}
                 name="Passaporte Antecipado"
@@ -41,7 +41,7 @@ export default function Passaports() {
                 href="https://pague.yuupe.com/produtos/7"
               />
             ) : (
-              <Passaport
+              <PassaportSlide
                 price={59.97}
                 amount={1}
                 name="Passaporte Individual"
@@ -53,7 +53,7 @@ export default function Passaports() {
           </SwiperSlide>
 
           <SwiperSlide className="max-w-[600px]">
-            <Passaport
+            <PassaportSlide
               price={109.97}
               amount={2}
               background="red"
@@ -63,7 +63,7 @@ export default function Passaports() {
             />
           </SwiperSlide>
           <SwiperSlide className="max-w-[600px]">
-            <Passaport
+            <PassaportSlide
               price={149.97}
               amount={3}
               background="green"

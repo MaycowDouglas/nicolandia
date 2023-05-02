@@ -1,11 +1,47 @@
-export type Props = {
+import Image, { StaticImageData } from 'next/image'
+import Link from 'next/link'
+
+type PassaportSlideProps = {
+  href: string
+}
+
+export type FrontsideProps = {
+  name: string
+  image: StaticImageData
+}
+
+export type BacksideProps = {
   name: string
   amount: number
   price: number
   background: 'red' | 'green' | 'yellow' | 'blue'
 }
 
-export default function Backside({ name, amount, price, background }: Props) {
+export default function PassaportSlide({
+  href,
+  name,
+  image,
+  amount,
+  price,
+  background,
+}: FrontsideProps & BacksideProps & PassaportSlideProps) {
+  return (
+    <Link href={href} className="relative group">
+      <Frontside name={name} image={image} />
+      <Backside name={name} amount={amount} price={price} background={background} />
+    </Link>
+  )
+}
+
+function Frontside({ name, image }: FrontsideProps) {
+  return (
+    <div className="transition-all duration-500 rotate-y-0 group-hover:opacity-0 group-hover:rotate-y-180">
+      <Image className="rounded-xl" src={image} alt={name} />
+    </div>
+  )
+}
+
+function Backside({ name, amount, price, background }: BacksideProps) {
   const backgrounds = {
     red: 'bg-red',
     green: 'bg-green-200',

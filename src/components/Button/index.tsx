@@ -1,21 +1,23 @@
-import Link from 'next/link'
+import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react'
 
-type ButtonLinkProps = {
-  href: string
-  title: string
+type ButtonProps = {
   block: boolean
-  className: string
 }
 
-export default function ButtonLink({ title, className, block, href }: ButtonLinkProps) {
+export default function Button({
+  title,
+  className,
+  block,
+  ...rest
+}: ButtonProps & DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>) {
   return (
-    <Link
-      href={href}
+    <button
       className={`px-7 py-3 inline-flex bg-red rounded-md text-light font-bold tracking-wide ${
         block ? 'w-100' : 'w-auto'
       } ${className}`}
+      {...rest}
     >
       {title}
-    </Link>
+    </button>
   )
 }

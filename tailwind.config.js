@@ -25,7 +25,7 @@ module.exports = {
   theme: {
     colors: {
       red: {
-        DEFAULT: '#F50000',
+        DEFAULT: '#DD0000',
       },
       blue: {
         100: '#203E3F',
