@@ -65,14 +65,14 @@ export default function FaqPage() {
         'O Visitante que adquiriu o passaporte do parque (pulseira) poderá fazer sua saída de no máximo 30 minutos caso precise se ausentar do estabelecimento, ou ir até o estacionamento. Nestes casos, terá direito a uma tolerância máxima de 30 minutos, passando desse tempo, deverá adquirir novamente o acesso as atrações.',
     },
     {
-      question: 'Atenção com as crianças.',
+      question: 'Atenção com as crianças',
       awnser:
         'Queridos visitantes da Nova Nicolândia, informamos que, para que as crianças não se percam no nosso espaço, pedimos que coloquem o número de telefone do responsável na pulseira da mesma, pois caso ocorra, a assistência do parque ligará para o responsável. Agradecemos a colaboração e desejamos muita diversão!',
     },
     {
-      question: 'Alimentos e bebidas no parque.',
+      question: 'Alimentos e bebidas no parque',
       awnser: [
-        'Levar o próprio lanche de casa é um direito seu. O parque permite a entrada de alimentos e bebidas por grupo de visitantes ou famílias. Não sendo permitindo a entrada de caixas de isopores ou mochilas, contendo os seguintes itens:',
+        'Levar o próprio lanche de casa é um direito seu. O parque permite a entrada de alimentos e bebidas por grupo de visitantes ou famílias. Não sendo permitido a entrada de caixas de isopor, coolers ou mochilas, contendo os seguintes itens:',
         'Garrafas de vidro, bebidas alcoólicas, alimentos perecíveis tipo almoços, sendo permitido somente lanches como sanduíches de qualquer espécie, condicionando o acesso somente uma (1) única vez pelo responsável pelo grupo de passeio.',
         'Em casos de restrição alimentar, mediante apresentação de laudo médico, deve-se apresentar diretamente na portaria do parque.',
       ],

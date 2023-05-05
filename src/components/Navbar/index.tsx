@@ -95,6 +95,11 @@ export default function Navbar() {
               </ul>
             </li>
             <li className="py-3">
+              <NavbarLink title="Dúvidas frequentes" href="/duvidas-frequentes">
+                Dúvidas frequentes
+              </NavbarLink>
+            </li>
+            <li className="py-3">
               <NavbarLink
                 target="_blank"
                 title="Baixe o aplicativo"
