@@ -39,6 +39,7 @@ export default function Layout({ title, description, children }: LayoutProps) {
       </div>
       {children}
       <button
+        title="Suporte"
         className="fixed bottom-10 right-10 z-50 p-5 flex items-center justify-center gap-5 bg-blue-200 rounded-full text-xl text-light"
         onClick={() => toggle()}
       >
