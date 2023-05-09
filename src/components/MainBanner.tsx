@@ -17,13 +17,20 @@ export default function MainBanner({ desktop, mobile, alt }: MainBannerProps) {
         className="object-cover md:hidden"
         alt={alt}
       />
-      <Image
+      {/* <Image
         src={desktop}
         fill
         priority
         sizes="(min-width: 0) 100vw"
         className="object-cover hidden md:block"
         alt={alt}
+      /> */}
+      <video
+        src="/images/banners/one-web.mp4"
+        loop
+        muted
+        autoPlay
+        className="object-cover object-center hidden md:block"
       />
     </div>
   )
