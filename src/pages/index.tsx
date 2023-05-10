@@ -31,7 +31,7 @@ export default function HomePage() {
 
       <PassaportCarousel />
 
-      {/* <CTANicoApp /> */}
+      <CTANicoApp />
 
       <AttractionCarousel />
     </Layout>

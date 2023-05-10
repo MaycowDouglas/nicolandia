@@ -99,7 +99,7 @@ export default function Navbar() {
                 Dúvidas frequentes
               </NavbarLink>
             </li>
-            {/* <li className="py-3">
+            <li className="py-3">
               <NavbarLink
                 target="_blank"
                 title="Baixe o aplicativo"
@@ -107,7 +107,7 @@ export default function Navbar() {
               >
                 Baixe o aplicativo
               </NavbarLink>
-            </li> */}
+            </li>
           </ul>
         </div>
       </nav>
@@ -183,7 +183,7 @@ export default function Navbar() {
               Dúvidas frequentes
             </NavbarLink>
           </li>
-          {/* <li className="py-4">
+          <li className="py-4">
             <NavbarLink
               target="_blank"
               title="Baixe o aplicativo"
@@ -191,7 +191,7 @@ export default function Navbar() {
             >
               Baixe o aplicativo
             </NavbarLink>
-          </li> */}
+          </li>
         </ul>
       </aside>
     </>
