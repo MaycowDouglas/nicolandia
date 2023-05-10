@@ -30,7 +30,7 @@ export default function MainBanner({ desktop, mobile, alt }: MainBannerProps) {
         loop
         muted
         autoPlay
-        className="object-cover object-center hidden md:block"
+        className="hidden md:block w-full h-auto"
       />
     </div>
   )
