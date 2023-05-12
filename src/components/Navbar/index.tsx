@@ -127,7 +127,7 @@ export default function Navbar() {
           }`}
         >
           <li className="py-4">
-            <NavbarLink title="Atrações" href="" onClick={() => setShowMenu(false)}>
+            <NavbarLink title="Atrações" href="/atracoes" onClick={() => setShowMenu(false)}>
               Atrações
             </NavbarLink>
           </li>
