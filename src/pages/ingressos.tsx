@@ -1,9 +1,9 @@
 import Layout from '@/components/Layout'
 import PassaportTicket from '@/components/Passaport/PassaportTicket'
-import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
-import PassaporteEncantado from '@/public/images/tickets/encantado.png'
-import PassaporteEspetacular from '@/public/images/tickets/espetacular.png'
-import PassaporteIndividual from '@/public/images/tickets/individual.png'
+import PassaporteAntecipado from '@/public/images/tickets/antecipado.jpg'
+import PassaporteEncantado from '@/public/images/tickets/encantado.jpg'
+import PassaporteEspetacular from '@/public/images/tickets/espetacular.jpg'
+import PassaporteIndividual from '@/public/images/tickets/individual.jpg'
 import { GoAlert } from 'react-icons/go'
 
 export default function TicketsPage() {
@@ -28,7 +28,7 @@ export default function TicketsPage() {
                 name="Passaporte Antecipado"
                 href="https://pague.yuupe.com/produtos/7"
                 image={PassaporteAntecipado}
-                price={39.97}
+                price={43.9}
                 amount={1}
               />
             ) : (
@@ -36,7 +36,7 @@ export default function TicketsPage() {
                 name="Passaporte Individual"
                 href="https://pague.yuupe.com/produtos/2"
                 image={PassaporteIndividual}
-                price={59.97}
+                price={64.9}
                 amount={1}
               />
             )}
@@ -45,7 +45,7 @@ export default function TicketsPage() {
               name="Passaporte Encantado"
               href="https://pague.yuupe.com/produtos/3"
               image={PassaporteEncantado}
-              price={109.97}
+              price={118.9}
               amount={2}
             />
 
@@ -53,7 +53,7 @@ export default function TicketsPage() {
               name="Passaporte Espetacular"
               href="https://pague.yuupe.com/produtos/4"
               image={PassaporteEspetacular}
-              price={149.97}
+              price={161.9}
               amount={3}
             />
           </div>

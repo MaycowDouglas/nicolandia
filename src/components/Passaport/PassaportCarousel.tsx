@@ -1,7 +1,7 @@
-import PassaporteAntecipado from '@/public/images/tickets/antecipado.png'
-import PassaporteEncantado from '@/public/images/tickets/encantado.png'
-import PassaporteEspetacular from '@/public/images/tickets/espetacular.png'
-import PassaporteIndividual from '@/public/images/tickets/individual.png'
+import PassaporteAntecipado from '@/public/images/tickets/antecipado.jpg'
+import PassaporteEncantado from '@/public/images/tickets/encantado.jpg'
+import PassaporteEspetacular from '@/public/images/tickets/espetacular.jpg'
+import PassaporteIndividual from '@/public/images/tickets/individual.jpg'
 import Link from 'next/link'
 import { BsChevronRight } from 'react-icons/bs'
 import SwiperCore, { Autoplay } from 'swiper'
@@ -33,7 +33,7 @@ export default function PassaportCarousel() {
           <SwiperSlide className="max-w-[600px]">
             {promotionCondition ? (
               <PassaportSlide
-                price={39.97}
+                price={43.9}
                 amount={1}
                 name="Passaporte Antecipado"
                 background="yellow"
@@ -42,7 +42,7 @@ export default function PassaportCarousel() {
               />
             ) : (
               <PassaportSlide
-                price={59.97}
+                price={64.9}
                 amount={1}
                 name="Passaporte Individual"
                 background="blue"
@@ -54,7 +54,7 @@ export default function PassaportCarousel() {
 
           <SwiperSlide className="max-w-[600px]">
             <PassaportSlide
-              price={109.97}
+              price={118.9}
               amount={2}
               background="red"
               name="Passaporte Encantado"
@@ -64,7 +64,7 @@ export default function PassaportCarousel() {
           </SwiperSlide>
           <SwiperSlide className="max-w-[600px]">
             <PassaportSlide
-              price={149.97}
+              price={161.9}
               amount={3}
               background="green"
               name="Passaporte Espetacular"
