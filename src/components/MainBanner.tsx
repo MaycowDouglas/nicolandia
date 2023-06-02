@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from 'next/image'
+import { VideoHTMLAttributes, useEffect, useRef } from 'react'
 
 type MainBannerProps = {
   alt: string
@@ -7,30 +8,41 @@ type MainBannerProps = {
 }
 
 export default function MainBanner({ desktop, mobile, alt }: MainBannerProps) {
+  const videoWeb = useRef<any>(null)
+  const videoMobile = useRef<any>(null)
+
+  useEffect(() => {
+    if (videoWeb.current !== null && videoMobile.current !== null) {
+      videoWeb.current.muted = false
+      videoMobile.current.muted = false
+    }
+
+    return () => {
+      // Desabilitar o áudio quando o componente for desmontado
+      if (videoWeb.current !== null && videoMobile.current !== null) {
+        videoWeb.current.muted = true
+        videoMobile.current.muted = true
+      }
+    }
+  }, [])
+
   return (
     <div className="relative w-full h-screen">
-      <Image
-        src={mobile}
-        fill
-        priority
-        sizes="(min-width: 0) 100vw"
-        className="object-cover md:hidden"
-        alt={alt}
-      />
-      {/* <Image
-        src={desktop}
-        fill
-        priority
-        sizes="(min-width: 0) 100vw"
-        className="object-cover hidden md:block"
-        alt={alt}
-      /> */}
       <video
-        src="/images/banners/one-web.mp4"
+        ref={videoWeb}
+        src="/videos/kabum-web.mp4"
         loop
-        muted
+        muted={true}
         autoPlay
         className="hidden md:block w-full h-auto"
+      />
+      <video
+        ref={videoMobile}
+        src="/videos/kabum-mobile.mp4"
+        loop
+        muted={true}
+        autoPlay
+        className="md:hidden w-full h-auto"
       />
     </div>
   )
