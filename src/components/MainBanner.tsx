@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from 'next/image'
-import { VideoHTMLAttributes, useEffect, useRef } from 'react'
+import { MutableRefObject, VideoHTMLAttributes, useEffect, useRef, useState } from 'react'
+import { FaPlay } from 'react-icons/fa'
 
 type MainBannerProps = {
   alt: string
@@ -10,38 +11,45 @@ type MainBannerProps = {
 export default function MainBanner({ desktop, mobile, alt }: MainBannerProps) {
   const videoWeb = useRef<any>(null)
   const videoMobile = useRef<any>(null)
+  const [isPlaying, setIsPlaying] = useState(false)
 
-  useEffect(() => {
-    if (videoWeb.current !== null && videoMobile.current !== null) {
-      videoWeb.current.muted = false
-      videoMobile.current.muted = false
-    }
-
-    return () => {
-      // Desabilitar o áudio quando o componente for desmontado
-      if (videoWeb.current !== null && videoMobile.current !== null) {
-        videoWeb.current.muted = true
-        videoMobile.current.muted = true
-      }
-    }
-  }, [])
+  function handlePlayClick(ref: any) {
+    setIsPlaying(true)
+    ref.current.play()
+  }
 
   return (
     <div className="relative w-full h-screen">
+      <button
+        className={`z-50 w-32 h-32 hidden md:inline-block ${
+          isPlaying ? 'md:hidden' : 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'
+        }`}
+        onClick={() => handlePlayClick(videoWeb)}
+      >
+        <span className="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex w-28 h-28 rounded-full bg-light bg-opacity-30 animate-pulse"></span>
+        <span className="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex w-20 h-20 rounded-full bg-light bg-opacity-50 animate-pulse"></span>
+        <FaPlay className="absolute z-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex text-light text-2xl" />
+      </button>
+      <button
+        className={`z-50 w-32 h-32 md:hidden ${
+          isPlaying ? 'hidden' : 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'
+        }`}
+        onClick={() => handlePlayClick(videoMobile)}
+      >
+        <span className="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex w-28 h-28 rounded-full bg-light bg-opacity-30 animate-pulse"></span>
+        <span className="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex w-20 h-20 rounded-full bg-light bg-opacity-50 animate-pulse"></span>
+        <FaPlay className="absolute z-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex text-light text-2xl" />
+      </button>
       <video
+        loop
         ref={videoWeb}
         src="/videos/kabum-web.mp4"
-        loop
-        muted={true}
-        autoPlay
         className="hidden md:block w-full h-auto"
       />
       <video
+        loop
         ref={videoMobile}
         src="/videos/kabum-mobile.mp4"
-        loop
-        muted={true}
-        autoPlay
         className="md:hidden w-full h-auto"
       />
     </div>
