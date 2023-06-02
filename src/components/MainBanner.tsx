@@ -19,7 +19,12 @@ export default function MainBanner({ desktop, mobile, alt }: MainBannerProps) {
   }
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full bg-red">
+      <div
+        className={
+          isPlaying ? 'hidden' : 'bg-dark bg-opacity-30 absolute top-0 left-0 right-0 bottom-0'
+        }
+      ></div>
       <button
         className={`z-50 w-32 h-32 hidden md:inline-block ${
           isPlaying ? 'md:hidden' : 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'
