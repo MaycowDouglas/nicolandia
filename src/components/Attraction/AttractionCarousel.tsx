@@ -20,7 +20,7 @@ import AtractionTiro from '@/public/images/atractions/tiro.jpeg'
 import AtractionToboga from '@/public/images/atractions/toboga.jpg'
 import AtractionTremCavalaria from '@/public/images/atractions/trem-cavalaria.jpg'
 import AtractionTrenzinhoCircus from '@/public/images/atractions/trenzinho-circus.jpeg'
-import AtractionTrenzinhoEncantado from '@/public/images/atractions/trenzinho-encantado.jpeg'
+// import AtractionTrenzinhoEncantado from '@/public/images/atractions/trenzinho-encantado.jpeg'
 import AtractionTrenzinhoFazenda from '@/public/images/atractions/trenzinho-fazenda.jpeg'
 import AtractionTrenzinhoTour from '@/public/images/atractions/trenzinho-tour.jpeg'
 import AtractionWaveBlaster from '@/public/images/atractions/wave-blaster.jpeg'
@@ -120,10 +120,10 @@ export default function AttractionCarousel() {
       title: 'Trenzinho Circus',
       image: AtractionTrenzinhoCircus,
     },
-    {
-      title: 'Trenzinho Encantado',
-      image: AtractionTrenzinhoEncantado,
-    },
+    // {
+    //   title: 'Trenzinho Encantado',
+    //   image: AtractionTrenzinhoEncantado,
+    // },
     {
       title: 'Trenzinho Fazenda',
       image: AtractionTrenzinhoFazenda,

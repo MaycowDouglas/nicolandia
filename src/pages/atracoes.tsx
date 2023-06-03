@@ -22,12 +22,11 @@ import AtractionTiro from '@/public/images/atractions/tiro.jpeg'
 import AtractionToboga from '@/public/images/atractions/toboga.jpg'
 import AtractionTremCavalaria from '@/public/images/atractions/trem-cavalaria.jpg'
 import AtractionTrenzinhoCircus from '@/public/images/atractions/trenzinho-circus.jpeg'
-import AtractionTrenzinhoEncantado from '@/public/images/atractions/trenzinho-encantado.jpeg'
+// import AtractionTrenzinhoEncantado from '@/public/images/atractions/trenzinho-encantado.jpeg'
 import AtractionTrenzinhoFazenda from '@/public/images/atractions/trenzinho-fazenda.jpeg'
 import AtractionTrenzinhoTour from '@/public/images/atractions/trenzinho-tour.jpeg'
 import AtractionWaveBlaster from '@/public/images/atractions/wave-blaster.jpeg'
 import AtractionZipZap from '@/public/images/atractions/zip-zap.jpg'
-import Image from 'next/image'
 
 export default function AttractionPage() {
   return (
@@ -199,12 +198,12 @@ export default function AttractionPage() {
               image={AtractionTrenzinhoCircus}
               restrictions={{ minHeight: 80, maxHeight: 130 }}
             />
-            <AttractionCard
+            {/* <AttractionCard
               name="Trenzinho Encantado"
               category="childish"
               image={AtractionTrenzinhoEncantado}
               restrictions={{ minHeight: 80, maxHeight: 130 }}
-            />
+            /> */}
             <AttractionCard
               name="Zip zap"
               category="childish"
