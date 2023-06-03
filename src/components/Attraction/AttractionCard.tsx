@@ -36,7 +36,7 @@ export default function AttractionCard({
       <span className="absolute z-10 bg-light p-3 top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full">
         <Image width={50} height={50} src={categories[category]} alt="" />
       </span>
-      <header className="relative h-40">
+      <header className="relative h-56">
         <Image className="object-center object-cover rounded-lg" src={image} alt={name} fill />
       </header>
       <section className="text-blue-100">
