@@ -2,6 +2,7 @@ import PassaporteAntecipado from '@/public/images/tickets/antecipado.jpg'
 import PassaporteEncantado from '@/public/images/tickets/encantado.jpg'
 import PassaporteEspetacular from '@/public/images/tickets/espetacular.jpg'
 import PassaporteIndividual from '@/public/images/tickets/individual.jpg'
+import PassaporteNamorados from '@/public/images/tickets/namorados.png'
 import Link from 'next/link'
 import { BsChevronRight } from 'react-icons/bs'
 import SwiperCore, { Autoplay } from 'swiper'
@@ -62,12 +63,12 @@ export default function PassaportCarousel() {
 
           <SwiperSlide className="max-w-[600px]">
             <PassaportSlide
-              price={118.9}
+              price={69.9}
               amount={2}
-              background="red"
-              name="Passaporte Encantado"
-              image={PassaporteEncantado}
-              href="https://pague.yuupe.com/produtos/3"
+              background="pink"
+              name="Combo Love"
+              image={PassaporteNamorados}
+              href="https://pague.yuupe.com/produtos/10"
             />
           </SwiperSlide>
           <SwiperSlide className="max-w-[600px]">

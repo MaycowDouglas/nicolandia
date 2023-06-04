@@ -4,6 +4,7 @@ import PassaporteAntecipado from '@/public/images/tickets/antecipado.jpg'
 import PassaporteEncantado from '@/public/images/tickets/encantado.jpg'
 import PassaporteEspetacular from '@/public/images/tickets/espetacular.jpg'
 import PassaporteIndividual from '@/public/images/tickets/individual.jpg'
+import PassaporteNamorados from '@/public/images/tickets/namorados.png'
 import { GoAlert } from 'react-icons/go'
 
 export default function TicketsPage() {
@@ -49,10 +50,10 @@ export default function TicketsPage() {
             />
 
             <PassaportTicket
-              name="Passaporte Encantado"
-              href="https://pague.yuupe.com/produtos/3"
-              image={PassaporteEncantado}
-              price={118.9}
+              name="Combo Love"
+              href="https://pague.yuupe.com/produtos/10"
+              image={PassaporteNamorados}
+              price={69.9}
               amount={2}
             />
 

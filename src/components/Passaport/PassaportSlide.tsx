@@ -14,7 +14,7 @@ export type BacksideProps = {
   name: string
   amount: number
   price: number
-  background: 'red' | 'green' | 'yellow' | 'blue'
+  background: 'red' | 'green' | 'yellow' | 'blue' | 'pink'
 }
 
 export default function PassaportSlide({
@@ -47,6 +47,7 @@ function Backside({ name, amount, price, background }: BacksideProps) {
     green: 'bg-green-200',
     yellow: 'bg-yellow',
     blue: 'bg-blue-200',
+    pink: 'bg-pink',
   }
   return (
     <div
