@@ -22,7 +22,7 @@ export default function TicketsPage() {
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {(nowSP.getDay() >= 1 && nowSP.getDay() <= 4) ||
+            {/* {(nowSP.getDay() >= 1 && nowSP.getDay() <= 4) ||
             (nowSP.getDay() === 0 && nowSP.getHours() >= 20) ? (
               <PassaportTicket
                 name="Passaporte Antecipado"
@@ -39,7 +39,14 @@ export default function TicketsPage() {
                 price={64.9}
                 amount={1}
               />
-            )}
+            )} */}
+            <PassaportTicket
+              name="Passaporte Individual"
+              href="https://pague.yuupe.com/produtos/2"
+              image={PassaporteIndividual}
+              price={64.9}
+              amount={1}
+            />
 
             <PassaportTicket
               name="Passaporte Encantado"

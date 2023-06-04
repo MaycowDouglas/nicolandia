@@ -31,7 +31,7 @@ export default function PassaportCarousel() {
         </div>
         <Swiper spaceBetween={20} slidesPerView="auto" autoplay={{ delay: 3000 }}>
           <SwiperSlide className="max-w-[600px]">
-            {promotionCondition ? (
+            {/* {promotionCondition ? (
               <PassaportSlide
                 price={43.9}
                 amount={1}
@@ -49,7 +49,15 @@ export default function PassaportCarousel() {
                 image={PassaporteIndividual}
                 href="https://pague.yuupe.com/produtos/2"
               />
-            )}
+            )} */}
+            <PassaportSlide
+              price={64.9}
+              amount={1}
+              name="Passaporte Individual"
+              background="blue"
+              image={PassaporteIndividual}
+              href="https://pague.yuupe.com/produtos/2"
+            />
           </SwiperSlide>
 
           <SwiperSlide className="max-w-[600px]">
