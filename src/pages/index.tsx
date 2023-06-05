@@ -1,4 +1,5 @@
 import 'swiper/css'
+import 'swiper/css/navigation'
 
 import AttractionCarousel from '@/components/Attraction/AttractionCarousel'
 import CTANicoApp from '@/components/CTA/NicoApp'
@@ -8,9 +9,9 @@ import PassaportCarousel from '@/components/Passaport/PassaportCarousel'
 import BannerOneMobile from '@/public/images/banners/namorados-mobile.png'
 import BannerOneWeb from '@/public/images/banners/namorados-web.png'
 import { useRef } from 'react'
-import SwiperCore, { Autoplay } from 'swiper'
+import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-SwiperCore.use([Autoplay])
+SwiperCore.use([Autoplay, Navigation])
 
 export default function HomePage() {
   const swiperRef = useRef<any>(null)
@@ -33,7 +34,7 @@ export default function HomePage() {
       description="A Nova Nicolândia é um parque de diversões urbano e fechado, garantindo assim a segurança dos visitantes. O mundo da diversão não poderia estar em outro lugar, senão no coração de Brasília. Conheça o nosso parque e apaixone-se!"
     >
       <section>
-        <Swiper ref={swiperRef} autoplay={{ delay: 4000 }}>
+        <Swiper ref={swiperRef} autoplay={{ delay: 4000 }} modules={[Navigation]} navigation>
           <SwiperSlide>
             <MainBanner
               alt="Diversão para toda a Família!"

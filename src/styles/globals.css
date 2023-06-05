@@ -6,4 +6,20 @@ html {
   scroll-behavior: smooth;
 }
 
+.swiper-button-prev { left: 0 !important; }
+.swiper-button-next { right: 0 !important; }
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 0 !important;
+  height: 100% !important;
+  padding: 2rem;
+  background-color: rgba(0,0,0, 0.3); /* Adicione sua cor personalizada aqui */
+  color: #fff !important; /* Cor do texto */
+}
+
+.swiper-button-disabled {
+  opacity: 0.5; /* Opacidade para botões desabilitados */
+}
+
 @import 'nprogress.css';
