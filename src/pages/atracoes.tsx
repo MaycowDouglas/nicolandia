@@ -37,8 +37,7 @@ export default function AttractionPage() {
       <section className="bg-gray-200 py-8">
         <div className="container">
           <h1 className="text-blue-100 font-black text-center text-3xl md:text-4xl xl:text-5xl leading-tight mb-10">
-            Na <span className="text-red">Nova Nicolândia</span>, você{' '}
-            <br className="hidden md:block" />
+            Na <span className="text-red">Nicolândia</span>, você <br className="hidden md:block" />
             se diverte de verdade!
           </h1>
 
