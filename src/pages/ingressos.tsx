@@ -42,11 +42,18 @@ export default function TicketsPage() {
               />
             )}
 
-            <PassaportTicket
+            {/* <PassaportTicket
               name="Passaporte Encantado"
               href="https://pague.yuupe.com/produtos/3"
               image={PassaporteEncantado}
               price={118.9}
+              amount={2}
+            /> */}
+            <PassaportTicket
+              name="Combo Love"
+              href="https://pague.yuupe.com/produtos/10"
+              image={PassaporteNamorados}
+              price={69.9}
               amount={2}
             />
 

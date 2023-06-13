@@ -62,13 +62,21 @@ export default function PassaportCarousel() {
           </SwiperSlide>
 
           <SwiperSlide className="max-w-[600px]">
-            <PassaportSlide
+            {/* <PassaportSlide
               price={118.9}
               amount={2}
               background="red"
               name="Passaporte Encantado"
               image={PassaporteEncantado}
               href="https://pague.yuupe.com/produtos/3"
+            /> */}
+            <PassaportSlide
+              price={69.9}
+              amount={2}
+              background="pink"
+              name="Combo Love"
+              image={PassaporteNamorados}
+              href="https://pague.yuupe.com/produtos/10"
             />
           </SwiperSlide>
           <SwiperSlide className="max-w-[600px]">
