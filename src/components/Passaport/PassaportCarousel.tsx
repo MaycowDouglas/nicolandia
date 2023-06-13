@@ -32,7 +32,7 @@ export default function PassaportCarousel() {
         </div>
         <Swiper spaceBetween={20} slidesPerView="auto" autoplay={{ delay: 3000 }}>
           <SwiperSlide className="max-w-[600px]">
-            {/* {promotionCondition ? (
+            {promotionCondition ? (
               <PassaportSlide
                 price={43.9}
                 amount={1}
@@ -50,25 +50,25 @@ export default function PassaportCarousel() {
                 image={PassaporteIndividual}
                 href="https://pague.yuupe.com/produtos/2"
               />
-            )} */}
-            <PassaportSlide
+            )}
+            {/* <PassaportSlide
               price={64.9}
               amount={1}
               name="Passaporte Individual"
               background="blue"
               image={PassaporteIndividual}
               href="https://pague.yuupe.com/produtos/2"
-            />
+            /> */}
           </SwiperSlide>
 
           <SwiperSlide className="max-w-[600px]">
             <PassaportSlide
-              price={69.9}
+              price={118.9}
               amount={2}
-              background="pink"
-              name="Combo Love"
-              image={PassaporteNamorados}
-              href="https://pague.yuupe.com/produtos/10"
+              background="red"
+              name="Passaporte Encantado"
+              image={PassaporteEncantado}
+              href="https://pague.yuupe.com/produtos/3"
             />
           </SwiperSlide>
           <SwiperSlide className="max-w-[600px]">

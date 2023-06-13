@@ -35,13 +35,13 @@ export default function HomePage() {
     >
       <section>
         <Swiper ref={swiperRef} autoplay={{ delay: 4000 }} modules={[Navigation]} navigation>
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <MainBanner
               alt="Diversão para toda a Família!"
               mobile={BannerOneMobile}
               desktop={BannerOneWeb}
             />
-          </SwiperSlide>
+          </SwiperSlide> */}
           <SwiperSlide>
             <MainBanner
               isVideo
